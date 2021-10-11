@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navTop">
+      <nav id="navbar_top" class="navbar navbar-light navbar-expand-md bg-light">
+        <button class="navbar-brand button" id="home" onclick="onHomeClicked()">Home</button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <button class="nav-link button" id="liveReports" onclick="onLiveReportsClicked()">Live reports</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link button" id="aboutt" onclick="onAboutClicked()">About</button>
+            </li>
+            <li class="nav-item">
+              <span class="nav-link button" id="selectedcoins">Selected coins: </span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div id="errorMsg" class="text-danger bg-white mr-3"></div>
+
+    <div id="mymodal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" id="modaldialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">You have selected 5 coins already.</h5>
+          </div>
+          <div class="modal-body" id="modalbody"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn modalbtn" id="keepcurrent" data-dismiss="modal">
+              Keep Current Selection
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="containerWrapper">
+      <div onclick="scrollTotopFunction()" id="logo">CryptoBit</div>
+      <div class="searchAndClearBtn">
+        <!-- <input type="text" id="search-input" class="form-control mr-sm-2" placeholder="search" /> -->
+        <div class="box">
+          <div class="container-3">
+            <span class="icon"><i class="fa fa-search"></i></span>
+            <input type="text" id="search-input" placeholder="Search..." />
+          </div>
+        </div>
+        <button id="clearAllToggleBtn" title="Uncheck all toggles">Clear all</button>
+      </div>
+
+      <div id="mainContainer"></div>
+    </div>
+    <button onclick="scrollTotopFunction()" id="myBtn" title="Go to top">
+      <i class="far fa-arrow-alt-circle-up"></i>
+    </button>
+    <div class="loader"></div>
+
+    <script src="main.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+  </body>
+</html>
